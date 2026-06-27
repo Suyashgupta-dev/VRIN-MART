@@ -65,7 +65,6 @@ fetch(`https://dummyjson.com/products/${productId}`)
         // category.style.color = '#666';
 
         let brandTag = document.createElement('h4');
-        let category = document.createElement('h4');
         brandTag.textContent = `Brand: ${product.brand } || Category: ${product.category }`;
 
         brandTag.style.marginTop = '0';
