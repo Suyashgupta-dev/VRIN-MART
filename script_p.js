@@ -99,6 +99,38 @@ fetch(`https://dummyjson.com/products/${productId}`)
         weight.style.color = '#444';
 
 
+      let Policies_Shipping = document.createElement('h3');
+      Policies_Shipping.textContent=`Policies & Shipping` ;
+      Policies_Shipping.style.marginBottom = '0';
+
+        let Shipping_Info = document.createElement('p');
+         Shipping_Info.textContent = `Shipping Info: ${product.shippingInformation } ` ; 
+         
+         Shipping_Info.style.margin = '0';
+        Shipping_Info.style.lineHeight = '1.6';
+        Shipping_Info.style.color = '#444';
+
+
+
+        let Return_Policy = document.createElement('p');
+        Return_Policy.textContent = `Return Policy: ${product.returnPolicy } ` ;  
+
+        Return_Policy.style.margin = '0';
+        Return_Policy.style.lineHeight = '1.6';
+        Return_Policy.style.color = '#444';
+
+
+
+        let Warranty = document.createElement('p');
+        Warranty.textContent = `Warranty: ${product.warrantyInformation } ` ;  
+
+        Warranty.style.margin = '0';
+        Warranty.style.lineHeight = '1.6';
+        Warranty.style.color = '#444';
+
+
+
+
 // update isko bhi ek line me leke ana hai price original price and discount 
 
     //     let priceTag = document.createElement('h2');
@@ -175,13 +207,14 @@ fetch(`https://dummyjson.com/products/${productId}`)
         cart.style.backgroundColor = '#ff9f00';
         cart.style.color = 'white';
         cart.style.border = 'none';
-        cart.style.padding = '15px 30px';
+        cart.style.padding = '20px 90px';
         cart.style.fontSize = '16px';
         cart.style.fontWeight = 'bold';
         cart.style.borderRadius = '8px';
         cart.style.cursor = 'pointer';
         cart.style.width = 'fit-content'; 
         cart.style.marginTop = '10px';
+        cart.style.marginLeft = '230px';
 
 
 
@@ -197,10 +230,10 @@ fetch(`https://dummyjson.com/products/${productId}`)
           rightSide.appendChild(Product_Specifications);
         rightSide.appendChild(dimensions);
         rightSide.appendChild(weight);
-        
-        // rightSide.appendChild(stock);
-     
-     
+        rightSide.appendChild(Policies_Shipping);
+        rightSide.appendChild(Shipping_Info);
+        rightSide.appendChild(Return_Policy);
+        rightSide.appendChild(Warranty);
 
         rightSide.appendChild(cart);
 
