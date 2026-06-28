@@ -167,6 +167,12 @@ fetch(`https://dummyjson.com/products/${productId}`)
         Discountedprice.style.fontSize = '20px';
 
 
+        let rating = document.createElement('p');
+        rating.textContent = `Rating: ${product.rating }/5 Stars`;
+
+         rating.style.margin = '0';
+        rating.style.lineHeight = '1.6';
+        rating.style.color = '#444';
 
 
 
@@ -224,6 +230,7 @@ fetch(`https://dummyjson.com/products/${productId}`)
         // rightSide.appendChild(priceTag);
     //    rightSide.appendChild(discountPercentage);
        rightSide.appendChild(Discountedprice);
+       rightSide.appendChild(rating);
         rightSide.appendChild(descTag);
          rightSide.appendChild(availabilityStatus);
           rightSide.appendChild(minimumOrderQuantity);
